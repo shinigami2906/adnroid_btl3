@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="@drawable/border_set">
+        <Spinner
+            android:id="@+id/spinner_language_from"
+            android:spinnerMode="dropdown"
+            android:layout_width="0dp"
+            android:textAlignment="viewStart"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+
+        <Spinner
+            android:id="@+id/spinner_language_to"
+            android:spinnerMode="dropdown"
+            android:layout_width="0dp"
+            android:textAlignment="viewEnd"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/text_input"
+
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:paddingBottom="30dp"
+        android:textSize="@dimen/translate_text_size"
+        android:gravity="top"
+        android:hint="@string/hint_text"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="@drawable/border_set">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:padding="8dp"
+                    android:id="@+id/speech_bt"
+                    android:background="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickSpeechButton"
+                    android:src="@drawable/ic_baseline_keyboard_voice_24">
+
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speech">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+
+                android:layout_weight="1"
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:padding="8dp"
+                    android:background="#ffffff"
+
+                    android:id="@+id/clear_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickClearButton"
+                    android:src="@drawable/ic_baseline_backspace_24">
+
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clear">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/trans"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:padding="8dp"
+
+                    android:background="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickTransButton"
+                    android:src="@drawable/ic_baseline_translate_24">
+
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trans">
+
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_ouput"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:padding="8dp"
+        android:paddingBottom="30dp"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/black"
+        android:hint="Answer"
+        android:layout_marginBottom="1dp"
+        android:textSize="@dimen/translate_text_size" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_item"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/white"
+        android:layout_weight="20" />
+</LinearLayout>
